@@ -6,6 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5C4F287A-98E9-4561-A257-9659D544B4F9}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <LangVersion>12</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ONIMultiplayer</RootNamespace>
     <AssemblyName>ONIMultiplayer</AssemblyName>
@@ -44,7 +45,9 @@
       <HintPath>..\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -60,8 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\MODSTRINGS\UI.cs" />
     <Compile Include="Game\Tools.cs" />
-    <Compile Include="Game\UI\MainMenuPatch.cs" />
+    <Compile Include="Game\BASE\MainMenuPatch.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,7 +78,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
     <Folder Include="Exceptions\" />
     <Folder Include="ModRuntime\" />
     <Folder Include="patchs\" />
